@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-06-15T16:10:46.338Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0" etag="6YMN7bcsJvBkMbv3DYZT" version="21.3.8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-15T16:12:33.197Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0" etag="Tv-xGZLKG7rts7IPsm48" version="21.3.8" type="github">
   <diagram name="Page-1" id="eYoOHLzLo969Oum7pFAY">
-    <mxGraphModel dx="574" dy="302" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1434" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -162,15 +162,6 @@
         <mxCell id="NqawYDxZaYAyfjhPDusi-60" value="Add new task" style="text;html=1;strokeColor=#36393d;fillColor=#ffcc99;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="694" y="191" width="56" height="49" as="geometry" />
         </mxCell>
-        <mxCell id="NqawYDxZaYAyfjhPDusi-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="NqawYDxZaYAyfjhPDusi-8" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="754" y="339" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="694" y="339" />
-              <mxPoint x="754" y="339" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="NqawYDxZaYAyfjhPDusi-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" source="NqawYDxZaYAyfjhPDusi-63" target="NqawYDxZaYAyfjhPDusi-18" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
@@ -286,6 +277,9 @@
         </mxCell>
         <mxCell id="A5ye9QI1XxoY32_1NfIK-18" value="My Task Name" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#88C906;strokeColor=#2D7600;align=left;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="524" y="499" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="A5ye9QI1XxoY32_1NfIK-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.004;entryY=0.106;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="NqawYDxZaYAyfjhPDusi-4" target="NqawYDxZaYAyfjhPDusi-47">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
