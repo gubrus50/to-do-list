@@ -28,8 +28,8 @@ Our project is a task management application designed to empower users to create
 * <h3>Peace of Mind Protection</h3>
   Confirm-Action Page: We care about your peace of mind! That's why we've implemented a smart confirm-action page. It acts as an extra layer of protection, ensuring you never accidentally make a detrimental decision. Before carrying out critical actions, such as deleting a task, the confirm-action page will prompt you to verify your intent, providing you with peace of mind and safeguarding your valuable tasks.
 
-Revolutionize your task management experience today with our state-of-the-art software. Stay organized, boost your productivity, and accomplish more than ever before. Take control of your tasks like never before and unlock your true potential with our powerful task management application.
-
 <hr>
+
+Revolutionize your task management experience today with our state-of-the-art software. Stay organized, boost your productivity, and accomplish more than ever before. Take control of your tasks like never before and unlock your true potential with our powerful task management application.
 
 You can find more at [to-do-list/Design](https://github.com/gubrus50/to-do-list/tree/main/design)
