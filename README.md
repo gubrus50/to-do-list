@@ -1,6 +1,8 @@
 <h1>To-do-list</h1>
 
-A task management application that allows users to create, view, sort, and manage tasks, with features such as task creation, task details, task sorting, and confirmation prompts for critical actions. You can find more at [to-do-list/Design](https://github.com/gubrus50/to-do-list/tree/main/design)
+A task management application that allows users to create, view, sort, and manage tasks, with features such as task creation, task details, task sorting, and confirmation prompts for critical actions.
+
+* You can find more at [to-do-list/Design](https://github.com/gubrus50/to-do-list/tree/main/design)
 
 <hr>
 
