@@ -3,7 +3,7 @@
 A task management application that allows users to create, view, sort, and manage tasks, with features such as task creation, task details, task sorting, and confirmation prompts for critical actions.
 
 <h2>Purpose</h2>
-Our project is a task management application designed to empower users to create, view, sort, and manage their tasks effortlessly. With a user-friendly interface and powerful features, our goal is to enhance productivity and organization by providing a centralized platform for task tracking. Whether it's creating new tasks, sorting them based on status, or accessing comprehensive task details, our application strives to streamline the task management process. We aim to provide a seamless user experience, ensuring that users can stay focused, prioritize their work effectively, and achieve their goals with ease.
+Our project is a personal task management application designed to help individuals effectively organize and track their tasks. With a user-friendly interface and powerful features, our goal is to enhance personal productivity and organization by providing a convenient platform for managing tasks. Whether it's creating new tasks, sorting them based on status, or accessing comprehensive task details, our application aims to simplify the task management process for individuals. We strive to offer a seamless user experience, allowing users to stay focused, prioritize their tasks, and accomplish their goals efficiently.
 
 <h2>Features</h2>
 
