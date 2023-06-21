@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-06-21T11:55:42.386Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0" etag="FJ-DguY-O9k6ZIncjI0f" version="21.5.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-21T11:57:46.385Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0" etag="qR6jaDDp2Js6iWZ4AY3L" version="21.5.0" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1646" dy="431" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2022" dy="628" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -329,7 +329,7 @@
         <mxCell id="P1tq7cP90fNAgVn9INTa-172" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="P1tq7cP90fNAgVn9INTa-158" target="P1tq7cP90fNAgVn9INTa-159">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="P1tq7cP90fNAgVn9INTa-158" value="&lt;div&gt;Display:&lt;br&gt;confirm + cancel button, and an&lt;br&gt;empty popup, &lt;br&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="P1tq7cP90fNAgVn9INTa-158" value="&lt;div&gt;Display:&lt;br&gt;Confirm and Cancel buttons, and an&lt;br&gt;empty popup, &lt;br&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1700" y="100" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="P1tq7cP90fNAgVn9INTa-173" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="P1tq7cP90fNAgVn9INTa-159" target="P1tq7cP90fNAgVn9INTa-163">
