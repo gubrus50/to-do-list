@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-06-21T11:54:32.541Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0" etag="aUx-bFVXV_Onf1qWK8Av" version="21.5.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-21T11:55:42.386Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0" etag="FJ-DguY-O9k6ZIncjI0f" version="21.5.0" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="2876" dy="1077" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1646" dy="431" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -397,6 +397,9 @@
         </mxCell>
         <mxCell id="P1tq7cP90fNAgVn9INTa-194" value="Display buttons:&lt;br&gt;Cancel and Create" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="405.25" y="90" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="P1tq7cP90fNAgVn9INTa-208" value="&lt;b&gt;YES&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-110" y="400" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
