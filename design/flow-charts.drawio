@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-06-21T09:00:24.462Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0" etag="wWUxvPcIopt1YIzY1pZ-" version="21.5.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-21T09:00:57.796Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0" etag="kzPQlCGC7DoXMPyfOCmn" version="21.5.0" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="819" dy="431" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2049" dy="1077" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -123,7 +123,7 @@
           <mxGeometry x="245" y="150" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="IVSxT5j8KKHt3hRW0I3O-62" value="Display empty form with entries:&lt;br&gt;Task&#39;s Name &amp;amp; Details" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="295" y="100" width="210" height="60" as="geometry" />
+          <mxGeometry x="310" y="100" width="195" height="60" as="geometry" />
         </mxCell>
         <mxCell id="P1tq7cP90fNAgVn9INTa-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="IVSxT5j8KKHt3hRW0I3O-63" target="IVSxT5j8KKHt3hRW0I3O-71">
           <mxGeometry relative="1" as="geometry" />
