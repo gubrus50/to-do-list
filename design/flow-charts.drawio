@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-06-21T08:57:57.633Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0" etag="2juD2cv0FJR99di4hHiT" version="21.5.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-21T09:00:24.462Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0" etag="wWUxvPcIopt1YIzY1pZ-" version="21.5.0" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1434" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="819" dy="431" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -107,7 +107,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="IVSxT5j8KKHt3hRW0I3O-49" value="Redirect user to &lt;b&gt;Confirm Action&lt;/b&gt;&lt;br&gt;&lt;br&gt;to confirm action:&lt;br&gt;cancel &lt;b&gt;Compose Task?&lt;/b&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="IVSxT5j8KKHt3hRW0I3O-49" value="Redirect user to &lt;b&gt;Confirm Action&lt;/b&gt;&lt;br&gt;&lt;br&gt;to confirm action:&lt;br&gt;&lt;b&gt;Cancel Compose Task?&lt;/b&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="130" y="292.5" width="170" height="75" as="geometry" />
         </mxCell>
         <mxCell id="P1tq7cP90fNAgVn9INTa-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="IVSxT5j8KKHt3hRW0I3O-52" target="IVSxT5j8KKHt3hRW0I3O-13">
@@ -134,7 +134,7 @@
         <mxCell id="IVSxT5j8KKHt3hRW0I3O-70" value="&lt;b&gt;YES&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="120" y="150" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="IVSxT5j8KKHt3hRW0I3O-71" value="Redirect user to&lt;br&gt;&lt;b&gt;Main Panel&lt;/b&gt;&lt;br&gt;&lt;br&gt;and display all saved tasks" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="IVSxT5j8KKHt3hRW0I3O-71" value="Redirect user to&lt;br&gt;&lt;b&gt;Main Panel&lt;/b&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="130" y="380" width="170" height="77.5" as="geometry" />
         </mxCell>
         <mxCell id="P1tq7cP90fNAgVn9INTa-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="P1tq7cP90fNAgVn9INTa-0" target="P1tq7cP90fNAgVn9INTa-4">
@@ -280,7 +280,7 @@
         <mxCell id="P1tq7cP90fNAgVn9INTa-62" value="&lt;b&gt;YES&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1140" y="680" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="P1tq7cP90fNAgVn9INTa-63" value="Redirect user to&lt;br&gt;&lt;b&gt;Main Panel&lt;/b&gt;&lt;br&gt;&lt;br&gt;and display all saved tasks" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="P1tq7cP90fNAgVn9INTa-63" value="Redirect user to&lt;br&gt;&lt;b&gt;Main Panel&lt;/b&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="976" y="560" width="170" height="77.5" as="geometry" />
         </mxCell>
       </root>
