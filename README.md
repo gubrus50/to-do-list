@@ -1,6 +1,6 @@
 <h1>To-do-list</h1>
 
-<img src="https://github.com/gubrus50/to-do-list/blob/main/MainPage.PNG">
+<img height="400" src="https://github.com/gubrus50/to-do-list/blob/main/MainPage.PNG">
 
 **Short summary: A task management application that allows users to create, view, sort, and manage tasks, with features such as task creation, task details, task sorting, and confirmation prompts for critical actions.**
 
