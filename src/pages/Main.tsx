@@ -3,8 +3,8 @@ import Tasks from "../components/Tasks";
 
 function Main() {
   const [selected, setSelectedIndex] = useState(0);
-  const navOptions = new Set(["All", "Done", "ToDo", "Compose Task"]);
-  const navOptionsClass = "nav-item nav-link text-light fw-semibold p-3";
+  const navOptions = new Set(["All", "Done", "ToDo", "+"]);
+  const navOptionsClass = "nav-item nav-link text-light fw-semibold p-2";
 
   return (
     <>
@@ -24,12 +24,12 @@ function Main() {
               onClick={() => {
                 setSelectedIndex(index);
                 {
-                  option === "Compose Task"
+                  option === "+"
                     ? location.replace("/compose-task")
                     : location.replace(`#${option}`);
                 }
               }}
-              style={{ minWidth: "120px" }}
+              style={{ minWidth: "50px" }}
               aria-current={state}
               type="button"
               key={option}

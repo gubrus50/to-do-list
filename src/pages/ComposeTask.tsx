@@ -21,10 +21,10 @@ function ComposeTask() {
   return (
     <>
       <form
-        className="container-fluid d-flex vh-100 p-1"
+        className="container-fluid d-flex vh-100 pt-2"
         style={{ flexFlow: "column" }}
       >
-        <div className="form-floating mb-1" style={{ flex: "0 1 auto" }}>
+        <div className="form-floating mb-1">
           <input
             type="email"
             className={inputClass.concat(" fs-2")}
@@ -51,7 +51,12 @@ function ComposeTask() {
           </label>
         </div>
 
-        <div className="btn-group" role="group" aria-label="options">
+        <div
+          className="btn-group mt-1"
+          role="group"
+          aria-label="options"
+          style={{ marginBottom: "15vh" }}
+        >
           <button
             type="button"
             className="btn btn-warning rounded-0 fw-semibold"

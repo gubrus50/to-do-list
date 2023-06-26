@@ -17,7 +17,7 @@ let tasks = [
 ];
 
 function Tasks() {
-  const tasksClass = "btn text-start text-break rounded-0 w-100 fs-2";
+  const tasksClass = "btn text-start text-break rounded-0 w-100 fs-6";
 
   return (
     <>
