@@ -1,5 +1,9 @@
 <h1>To-do-list</h1>
 
+Main Page             |  Compose Task
+:-------------------------:|:-------------------------:
+<img height="400" src="https://github.com/gubrus50/to-do-list/blob/main/MainPage.PNG">  |  <img height="400" src="https://github.com/gubrus50/to-do-list/blob/main/ComposeTask.png">
+
 **Short summary: A task management application that allows users to create, view, sort, and manage tasks, with features such as task creation, task details, task sorting, and confirmation prompts for critical actions.**
 
 <hr>
