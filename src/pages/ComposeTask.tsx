@@ -22,9 +22,9 @@ function ComposeTask() {
     <>
       <form
         className="container-fluid d-flex vh-100 pt-2"
-        style={{ flexFlow: "column" }}
+        style={{ flexFlow: "column", maxWidth: "1280px" }}
       >
-        <div className="form-floating mb-1">
+        <div className="form-floating">
           <input
             type="email"
             className={inputClass.concat(" fs-2")}
@@ -38,7 +38,10 @@ function ComposeTask() {
           </label>
         </div>
 
-        <div className="form-floating row-fluid" style={{ flex: "1 1 auto" }}>
+        <div
+          className="form-floating row-fluid my-2"
+          style={{ flex: "1 1 auto" }}
+        >
           <textarea
             className={inputClass.concat(" fs-4 from-floating h-100")}
             onChange={(e) => labelAnimation(e.target)}
@@ -52,20 +55,22 @@ function ComposeTask() {
         </div>
 
         <div
-          className="btn-group mt-1"
+          className="d-flex justify-content-between mt-2"
           role="group"
           aria-label="options"
           style={{ marginBottom: "15vh" }}
         >
           <button
             type="button"
-            className="btn btn-warning rounded-0 fw-semibold"
+            className="btn btn-danger rounded-0 fw-semibold me-3 w-25"
+            onClick={() => location.replace("/confirm-action")}
           >
             Cancel
           </button>
           <button
             type="button"
-            className="btn btn-success rounded-0 fw-semibold"
+            className="btn btn-success rounded-0 fw-semibold w-75"
+            onClick={() => location.replace("/task-detail")}
           >
             Create
           </button>

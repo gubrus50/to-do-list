@@ -28,7 +28,12 @@ function Main() {
           };
 
           return option === "+" ? (
-            <a {...attributes} href="/compose-task">
+            <a
+              {...attributes}
+              href="/compose-task"
+              draggable="false"
+              style={{ userSelect: "none" }}
+            >
               +
             </a>
           ) : (

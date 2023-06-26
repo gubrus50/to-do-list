@@ -27,7 +27,7 @@ function Tasks() {
         return (
           <a
             key={index}
-            href={`#${task}`}
+            href={`/task-detail?t=${task}`}
             className={
               random === 1
                 ? tasksClass.concat(" btn-success")
