@@ -1,9 +1,5 @@
 <h1>To-do-list</h1>
 
-Main Page             |  Compose Task
-:-------------------------:|:-------------------------:
-<img height="400" src="https://github.com/gubrus50/to-do-list/blob/main/MainPage.PNG">  |  <img height="400" src="https://github.com/gubrus50/to-do-list/blob/main/ComposeTask.png">
-
 **Short summary: A task management application that allows users to create, view, sort, and manage tasks, with features such as task creation, task details, task sorting, and confirmation prompts for critical actions.**
 
 <hr>
@@ -36,4 +32,14 @@ Our project is a personal task management application designed to help individua
 
 Revolutionize your task management experience today with our state-of-the-art software. Stay organized, boost your productivity, and accomplish more than ever before. Take control of your tasks like never before and unlock your true potential with our powerful task management application.
 
+<h2>Prototype Design (27/06/2023)</h2>
+
 You can find more at [to-do-list/Design](https://github.com/gubrus50/to-do-list/tree/main/design)
+
+Main Page                  | Compose Task              | Action Page                
+:-------------------------:|:-------------------------:|:-------------------------:
+<img height="400" src="https://github.com/gubrus50/to-do-list/blob/main/showcase/pg-main.png">  |  <img height="400" src="https://github.com/gubrus50/to-do-list/blob/main/showcase/pg-compose.png">  |  <img height="400" src="https://github.com/gubrus50/to-do-list/blob/main/showcase/pg-action.png">
+
+| Task ToDo                  | Task Done
+|:-------------------------:|:-------------------------:
+| <img height="400" src="https://github.com/gubrus50/to-do-list/blob/main/showcase/unfinished-task.png">  |  <img height="400" src="https://github.com/gubrus50/to-do-list/blob/main/showcase/finished-task.png">
