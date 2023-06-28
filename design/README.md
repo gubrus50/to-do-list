@@ -10,3 +10,5 @@
 <img src="https://github.com/gubrus50/to-do-list/blob/main/design/Pre-Implementation Decisions_page-0001.jpg">
 <img src="https://github.com/gubrus50/to-do-list/blob/main/design/Pre-Implementation Decisions_page-0002.jpg">
 <img src="https://github.com/gubrus50/to-do-list/blob/main/design/Pre-Implementation Decisions_page-0003.jpg">
+<img src="https://github.com/gubrus50/to-do-list/blob/main/design/Prototype%20Implementation%20Decisions_page-0001.jpg">
+<img src="https://github.com/gubrus50/to-do-list/blob/main/design/Prototype%20Implementation%20Decisions_page-0002.jpg">
