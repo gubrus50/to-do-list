@@ -34,7 +34,7 @@ Revolutionize your task management experience today with our state-of-the-art so
 
 <h2>Prototype Design (27/06/2023)</h2>
 
-You can find more at [to-do-list/Design](https://github.com/gubrus50/to-do-list/tree/main/design)
+You can find more at [to-do-list/Doc](https://github.com/gubrus50/to-do-list/tree/main/doc)
 
 Main Page                  | Compose Task              | Action Page                
 :-------------------------:|:-------------------------:|:-------------------------:
