@@ -34,7 +34,7 @@ Revolutionize your task management experience today with our state-of-the-art so
 
 <h2>Prototype Design (27/06/2023)</h2>
 
-You can learn more at [to-do-list/Doc](https://github.com/gubrus50/to-do-list/blob/main/doc/Software%20Development%20Process.pdf)
+You can learn more at [to-do-list/Doc/Software Development Process.pdf](https://github.com/gubrus50/to-do-list/blob/main/doc/Software%20Development%20Process.pdf)
 
 Main Page                  | Compose Task              | Action Page                
 :-------------------------:|:-------------------------:|:-------------------------:
