@@ -1,6 +1,8 @@
 import cookies from "../scripts/cookies";
 import confirmAction from "../scripts/confirmAction";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+
+const input: any = {};
 
 const labelAnimation = (inputTarget: any) => {
   let label = inputTarget.nextSibling || false;
@@ -19,13 +21,44 @@ const labelAnimation = (inputTarget: any) => {
   }
 };
 
-const buttonCancelPressed = () => {
-  const elmTaskTitle: any = document.getElementById("taskTitle");
-  const elmTaskDetail: any = document.getElementById("taskDetail");
+const createAndSaveValidTask = () => {
+  // Return alert on failed validation
+  const t_len = input.title.value.length;
+  const d_len = input.detail.value.length;
 
+  if (!t_len || !d_len) {
+    return alert("Please fill out the form before submitting");
+  } else if (t_len > 30 || d_len > 500) {
+    return alert("Error illegal length");
+  }
+
+  // Construct task object
+  const task = {
+    title: input.title.value,
+    detail: input.detail.value,
+    state: "incomplete",
+    creation_date: (() => {
+      const d = new Date();
+      const date = d.toLocaleDateString("en-UK");
+      const time = d.toLocaleTimeString([], {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      return date + " " + time; // dd/mm/yyyy hh:mm
+    })(),
+  };
+
+  // Save new task in localStorage "tasks" list
+  const tasks: any = JSON.parse(localStorage.getItem("tasks")) || [];
+  tasks.push(task);
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+  location.replace("/task-detail");
+};
+
+const exitToMainPage = () => {
   // Save inputs temporarily
-  cookies.set("composeTask_taskTitle", elmTaskTitle.value, 1);
-  cookies.set("composeTask_taskDetail", elmTaskDetail.value, 1);
+  cookies.set("composeTask_taskTitle", input.title.value, 1);
+  cookies.set("composeTask_taskDetail", input.detail.value, 1);
   confirmAction.getResponse(
     "You are about to leave the compose task form, and you will lose your entries upon returning to the main panel."
   );
@@ -41,15 +74,13 @@ const OnActionResponse = () => {
   // Get temporarily saved data and their responsive inputs
   const taskTitleValue: string = cookies.get("composeTask_taskTitle") || "";
   const taskDetailValue: string = cookies.get("composeTask_taskDetail") || "";
-  const elmTaskTitle: any = document.getElementById("taskTitle");
-  const elmTaskDetail: any = document.getElementById("taskDetail");
 
   // Import temporarily saved data on "cancel"
   if (response === "cancel") {
-    elmTaskTitle.value = taskTitleValue;
-    elmTaskDetail.value = taskDetailValue;
-    labelAnimation(elmTaskTitle);
-    labelAnimation(elmTaskDetail);
+    input.title.value = taskTitleValue;
+    input.detail.value = taskDetailValue;
+    labelAnimation(input.title);
+    labelAnimation(input.detail);
   }
   // Delete temporarily saved data and return to the main page on "confirm"
   else if (response === "confirm") {
@@ -61,7 +92,12 @@ const OnActionResponse = () => {
 
 function ComposeTask() {
   const inputClass = "form-control rounded-0 ";
-  useEffect(() => OnActionResponse());
+
+  useEffect(() => {
+    input.title = document.getElementById("taskTitle");
+    input.detail = document.getElementById("taskDetail");
+    OnActionResponse();
+  });
 
   return (
     <>
@@ -108,14 +144,14 @@ function ComposeTask() {
           <button
             type="button"
             className="btn btn-danger rounded-0 fw-semibold me-3 w-25"
-            onClick={() => buttonCancelPressed()}
+            onClick={() => exitToMainPage()}
           >
             Cancel
           </button>
           <button
             type="button"
             className="btn btn-success rounded-0 fw-semibold w-75"
-            onClick={() => location.replace("/task-detail")}
+            onClick={() => createAndSaveValidTask()}
           >
             Create
           </button>
