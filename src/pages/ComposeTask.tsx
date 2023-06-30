@@ -33,7 +33,9 @@ const createAndSaveValidTask = () => {
   }
 
   // Construct task object
+  const tasks: any = JSON.parse(localStorage.getItem("tasks")) || [];
   const task = {
+    id: tasks.length,
     title: input.title.value,
     detail: input.detail.value,
     state: "incomplete",
@@ -49,10 +51,11 @@ const createAndSaveValidTask = () => {
   };
 
   // Save new task in localStorage "tasks" list
-  const tasks: any = JSON.parse(localStorage.getItem("tasks")) || [];
   tasks.push(task);
   localStorage.setItem("tasks", JSON.stringify(tasks));
-  location.replace("/task-detail");
+
+  // Redirect user to Detailed-Page with newly created task
+  location.replace("/task-detail?task_id=" + task.id);
 };
 
 const exitToMainPage = () => {

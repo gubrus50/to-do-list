@@ -1,9 +1,43 @@
 import { useState } from "react";
 import homeIcon from "../assets/home.svg";
 
+const getQueryParameterTaskId = () => {
+  const query_string = location.search;
+  const query_parameters = query_string.substring(1).split("&");
+
+  let param_task_id: number;
+
+  for (let i = 0; i < query_parameters.length; i++) {
+    const param: string = query_parameters[i];
+
+    if (param.substring(0, 8) === "task_id=") {
+      return (param_task_id = Number(param.substring(8)));
+    }
+  }
+
+  return null;
+};
+
+const getTaskFromQuery = () => {
+  const tasks: any = JSON.parse(localStorage.getItem("tasks")) || [];
+  const param_task_id: any = getQueryParameterTaskId();
+
+  for (let i = 0; i < tasks.length; i++) {
+    const task = tasks[i];
+    if (task.id === param_task_id) return task;
+  }
+
+  return null;
+};
+
 function TaskDetail() {
   // taskState: 1 - complete, 0 - unfinished
   const [taskState, setTaskState] = useState(0);
+
+  const task = getTaskFromQuery();
+  if (!task) location.replace("/main");
+
+  if (task.state === "complete") setTaskState(1);
 
   return (
     <>
@@ -26,8 +60,7 @@ function TaskDetail() {
           }`}
           style={{ textOverflow: "ellipsis" }}
         >
-          sdsd
-          sdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd
+          {task.title}
         </div>
       </nav>
       <hr className="border-white m-0"></hr>
@@ -39,9 +72,7 @@ function TaskDetail() {
       >
         <section aria-label="Task's details">
           <h2 className="fs-5">Task's Details</h2>
-          <p className="my-3">
-            sdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd
-          </p>
+          <p className="my-3">{task.detail}</p>
           <hr className="border-white m-0"></hr>
         </section>
 
@@ -50,7 +81,7 @@ function TaskDetail() {
           className="mt-3 align-baseline"
         >
           <h2 className="fs-6 me-3 d-inline">Created</h2>
-          <p style={{ float: "right" }}>dd/mm/yyyy time</p>
+          <p style={{ float: "right" }}>{task.creation_date}</p>
         </section>
       </article>
 
