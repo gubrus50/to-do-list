@@ -1,17 +1,16 @@
-import { useState } from "react";
 import homeIcon from "../assets/home.svg";
+import ComponentLoading from "../components/Loading";
+import { useState } from "react";
 
 const getQueryParameterTaskId = () => {
   const query_string = location.search;
   const query_parameters = query_string.substring(1).split("&");
 
-  let param_task_id: number;
-
   for (let i = 0; i < query_parameters.length; i++) {
     const param: string = query_parameters[i];
 
     if (param.substring(0, 8) === "task_id=") {
-      return (param_task_id = Number(param.substring(8)));
+      return Number(param.substring(8)); // param task_id value
     }
   }
 
@@ -30,14 +29,36 @@ const getTaskFromQuery = () => {
   return null;
 };
 
+const task = getTaskFromQuery();
+
 function TaskDetail() {
-  // taskState: 1 - complete, 0 - unfinished
-  const [taskState, setTaskState] = useState(0);
+  if (task === null) {
+    location.replace("/main");
+    return <ComponentLoading />;
+  }
 
-  const task = getTaskFromQuery();
-  if (!task) location.replace("/main");
+  const [taskState, setTaskState] = useState(task.state);
+  const updateTaskState = () => {
+    // Update state
+    if (taskState === "complete") {
+      setTaskState("incomplete");
+      task.state = "incomplete";
+    } else if (taskState === "incomplete") {
+      setTaskState("complete");
+      task.state = "complete";
+    }
 
-  if (task.state === "complete") setTaskState(1);
+    // Save updated task
+    const tasks: any = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    for (let i = 0; i < tasks.length; i++) {
+      if (tasks[i].id === task.id) {
+        tasks[i].state = task.state;
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+        break;
+      }
+    }
+  };
 
   return (
     <>
@@ -56,7 +77,7 @@ function TaskDetail() {
         </a>
         <div
           className={`btn text-start text-break rounded-0 fs-5 flex-fill text-nowrap overflow-hidden ${
-            taskState === 1 ? "btn-success" : "btn-secondary"
+            taskState === "complete" ? "btn-success" : "btn-secondary"
           }`}
           style={{ textOverflow: "ellipsis" }}
         >
@@ -100,13 +121,11 @@ function TaskDetail() {
         <button
           type="button"
           className={`btn rounded-0 fw-semibold w-75 ${
-            taskState === 1 ? "btn-light" : "btn-success"
+            taskState === "complete" ? "btn-light" : "btn-success"
           }`}
-          onClick={() => {
-            taskState === 0 ? setTaskState(1) : setTaskState(0);
-          }}
+          onClick={() => updateTaskState()}
         >
-          {taskState === 1 ? "Redo" : "Complete"}
+          {taskState === "complete" ? "Redo" : "Complete"}
         </button>
       </div>
     </>
