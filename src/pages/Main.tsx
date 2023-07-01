@@ -7,6 +7,9 @@ function Main() {
   const navOptions = new Set(["All", "Done", "ToDo", "+"]);
   const navOptionsClass = "nav-item nav-link text-light fw-semibold p-2";
 
+  const show =
+    selected === 1 ? "complete" : selected === 2 ? "incomplete" : "all";
+
   return (
     <>
       <nav className="navbar nav-fill navbar-expand-lg bg-dark p-0">
@@ -42,7 +45,7 @@ function Main() {
         })}
       </nav>
       <hr className="border-white m-0"></hr>
-      <Tasks />
+      <Tasks show={show} />
     </>
   );
 }

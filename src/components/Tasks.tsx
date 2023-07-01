@@ -1,42 +1,35 @@
-let tasks = [
-  "Organize your bookshelf",
-  "Wash the dishes and clean the kitchen",
-  "Vacuum the entire house",
-  "Sort and declutter your wardrobe",
-  "Clean the windows",
-  "Dust and wipe down all surfaces",
-  "Sweep and mop the floors",
-  "Take out the trash and recycling",
-  "Water the plants and tend to the garden",
-  "Rearrange the furniture in one room",
-  "Clean out the refrigerator and throw away expired items",
-  "Scrub the bathroom tiles and clean the bathtub",
-  "Wash and change the bed sheets",
-  "Wipe down and sanitize all doorknobs and light switches",
-  "Organize your desk and workspace",
-];
+interface Props {
+  show: string;
+}
 
-function Tasks() {
+function Tasks({ show = "all" }) {
   const tasksClass = "btn text-start text-break rounded-0 w-100 fs-6";
+  const tasks: any = JSON.parse(localStorage.getItem("tasks") || "") || [];
+
+  show = show.toLowerCase();
 
   return (
     <>
-      {tasks.map((task, index) => {
-        const random = Math.round(Math.random());
+      {tasks.map((task: any) => {
+        if (show != "all" && task.state != show) return null;
 
         return (
-          <a
-            key={index}
-            href={`/task-detail?t=${task}`}
-            className={
-              random === 1
-                ? tasksClass.concat(" btn-success")
-                : tasksClass.concat(" btn-dark")
-            }
-            draggable="false"
+          <div
+            key={task.id}
+            style={{ borderBottom: "1px solid rgba(255,255,255,.25)" }}
           >
-            {task}
-          </a>
+            <a
+              href={`/task-detail?task_id=${task.id}`}
+              className={
+                task.state === "complete"
+                  ? tasksClass.concat(" btn-success")
+                  : tasksClass.concat(" btn-dark")
+              }
+              draggable="false"
+            >
+              {task.title}
+            </a>
+          </div>
         );
       })}
     </>
