@@ -2,7 +2,7 @@
 import cookies from "./cookies"
 
 const getResponse = (warningMessage: string = '') => {
-    const path = location.pathname;
+    const path = location.pathname + location.search;
 
     cookies.delete("confirmAction_response");
     cookies.set("confirmAction_pathname", path, 1);

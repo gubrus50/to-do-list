@@ -33,9 +33,17 @@ const createAndSaveValidTask = () => {
   }
 
   // Construct task object
-  const tasks: any = JSON.parse(localStorage.getItem("tasks")) || [];
+  const tasks: any = JSON.parse(localStorage.getItem("tasks") || "") || [];
+  let biggest_id = -1;
+
+  for (let i = 0; i < tasks.length; i++) {
+    const task_id: number = tasks[i].id;
+
+    if (task_id > biggest_id) biggest_id = task_id;
+  }
+
   const task = {
-    id: tasks.length,
+    id: ++biggest_id,
     title: input.title.value,
     detail: input.detail.value,
     state: "incomplete",
@@ -67,7 +75,7 @@ const exitToMainPage = () => {
   );
 };
 
-const OnActionResponse = () => {
+const onActionResponse = () => {
   // Return if actionResponse if not "confirm" nor "cancel"
   const response = confirmAction.response() || null;
   if (response != "confirm" && response != "cancel") return;
@@ -99,7 +107,7 @@ function ComposeTask() {
   useEffect(() => {
     input.title = document.getElementById("taskTitle");
     input.detail = document.getElementById("taskDetail");
-    OnActionResponse();
+    onActionResponse();
   });
 
   return (

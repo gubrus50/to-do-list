@@ -1,6 +1,7 @@
 import homeIcon from "../assets/home.svg";
-import ComponentLoading from "../components/Loading";
-import { useState } from "react";
+import Loading from "../components/Loading";
+import confirmAction from "../scripts/confirmAction";
+import { useState, useEffect } from "react";
 
 const getQueryParameterTaskId = () => {
   const query_string = location.search;
@@ -10,7 +11,10 @@ const getQueryParameterTaskId = () => {
     const param: string = query_parameters[i];
 
     if (param.substring(0, 8) === "task_id=") {
-      return Number(param.substring(8)); // param task_id value
+      const task_id = param.substring(8);
+
+      if (task_id.length > 0) return Number(task_id);
+      break;
     }
   }
 
@@ -18,42 +22,68 @@ const getQueryParameterTaskId = () => {
 };
 
 const getTaskFromQuery = () => {
-  const tasks: any = JSON.parse(localStorage.getItem("tasks")) || [];
+  const tasks: any = JSON.parse(localStorage.getItem("tasks") || "") || [];
   const param_task_id: any = getQueryParameterTaskId();
 
   for (let i = 0; i < tasks.length; i++) {
     const task = tasks[i];
+
     if (task.id === param_task_id) return task;
   }
 
   return null;
 };
 
-const task = getTaskFromQuery();
+const Task = getTaskFromQuery();
 
-function TaskDetail() {
-  if (task === null) {
-    location.replace("/main");
-    return <ComponentLoading />;
+const deleteTask = () => {
+  const response = confirmAction.response() || null;
+  if (response != "confirm") return;
+
+  confirmAction.reset();
+  const tasks: any = JSON.parse(localStorage.getItem("tasks") || "") || [];
+
+  for (let i = 0; i < tasks.length; i++) {
+    // Remove Task from tasks
+    if (tasks[i].id === Task.id) {
+      tasks.splice(i, 1);
+      break;
+    }
   }
 
-  const [taskState, setTaskState] = useState(task.state);
+  // Replace old tasks in localStorage (save changes)
+  // and redirect user to main
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+  location.replace("/main");
+};
+
+function TaskDetail() {
+  if (Task === null) {
+    location.replace("/main");
+    return <Loading message="Redirecting to main page" />;
+  }
+
+  useEffect(() => {
+    deleteTask();
+  });
+
+  const [taskState, setTaskState] = useState(Task.state);
   const updateTaskState = () => {
     // Update state
     if (taskState === "complete") {
       setTaskState("incomplete");
-      task.state = "incomplete";
+      Task.state = "incomplete";
     } else if (taskState === "incomplete") {
       setTaskState("complete");
-      task.state = "complete";
+      Task.state = "complete";
     }
 
     // Save updated task
-    const tasks: any = JSON.parse(localStorage.getItem("tasks")) || [];
+    const tasks: any = JSON.parse(localStorage.getItem("tasks") || "") || [];
 
     for (let i = 0; i < tasks.length; i++) {
-      if (tasks[i].id === task.id) {
-        tasks[i].state = task.state;
+      if (tasks[i].id === Task.id) {
+        tasks[i].state = Task.state;
         localStorage.setItem("tasks", JSON.stringify(tasks));
         break;
       }
@@ -81,7 +111,7 @@ function TaskDetail() {
           }`}
           style={{ textOverflow: "ellipsis" }}
         >
-          {task.title}
+          {Task.title}
         </div>
       </nav>
       <hr className="border-white m-0"></hr>
@@ -93,7 +123,7 @@ function TaskDetail() {
       >
         <section aria-label="Task's details">
           <h2 className="fs-5">Task's Details</h2>
-          <p className="my-3">{task.detail}</p>
+          <p className="my-3">{Task.detail}</p>
           <hr className="border-white m-0"></hr>
         </section>
 
@@ -102,7 +132,7 @@ function TaskDetail() {
           className="mt-3 align-baseline"
         >
           <h2 className="fs-6 me-3 d-inline">Created</h2>
-          <p style={{ float: "right" }}>{task.creation_date}</p>
+          <p style={{ float: "right" }}>{Task.creation_date}</p>
         </section>
       </article>
 
@@ -114,7 +144,11 @@ function TaskDetail() {
         <button
           type="button"
           className="btn btn-danger rounded-0 fw-semibold me-3 w-25"
-          onClick={() => location.replace("/confirm-action")}
+          onClick={() =>
+            confirmAction.getResponse(
+              `You are about to delete the task: ${Task.title}`
+            )
+          }
         >
           Delete
         </button>
