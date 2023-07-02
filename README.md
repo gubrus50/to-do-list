@@ -2,7 +2,9 @@
 
 <table>
   <tr>
-    <td><img width="300" src="https://github.com/gubrus50/to-do-list/blob/main/showcase/showcase.gif"></td>
+    <td><img width="100%" src="https://github.com/gubrus50/to-do-list/blob/main/showcase/showcase.gif"></td>
+  </tr>
+  <tr>
     <td>
       <strong>A task management application that allows users to create, view, sort, and manage tasks, with features such as task creation, task details, task sorting, and confirmation prompts for critical actions.</strong></td>
     </td>
