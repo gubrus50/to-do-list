@@ -43,8 +43,6 @@ Our project is a personal task management application designed to help individua
 
 Revolutionize your task management experience today with our state-of-the-art software. Stay organized, boost your productivity, and accomplish more than ever before. Take control of your tasks like never before and unlock your true potential with our powerful task management application.
 
-<h2>Prototype Design (27/06/2023)</h2>
-
 You can learn more at [to-do-list/Doc/Software Development Process.pdf](https://github.com/gubrus50/to-do-list/blob/main/doc/Software%20Development%20Process.pdf)
 
 Main Page                  | Compose Task              | Action Page                
