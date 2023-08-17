@@ -1,10 +1,12 @@
+import getOrCreateEmptyList from "../scripts/localStorageList";
+
 interface Props {
   show: string;
 }
 
 function Tasks({ show = "all" }) {
   const tasksClass = "btn text-start text-break rounded-0 w-100 fs-6";
-  const tasks: any = JSON.parse(localStorage.getItem("tasks") || "") || [];
+  const tasks: any = getOrCreateEmptyList("tasks");
 
   show = show.toLowerCase();
 
