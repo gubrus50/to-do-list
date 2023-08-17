@@ -1,6 +1,7 @@
 import homeIcon from "../assets/home.svg";
 import Loading from "../components/Loading";
 import confirmAction from "../scripts/confirmAction";
+import getOrCreateEmptyList from "../scripts/localStorageList";
 import { useState, useEffect } from "react";
 
 const getQueryParameterTaskId = () => {
@@ -22,7 +23,7 @@ const getQueryParameterTaskId = () => {
 };
 
 const getTaskFromQuery = () => {
-  const tasks: any = JSON.parse(localStorage.getItem("tasks") || "") || [];
+  const tasks: any = getOrCreateEmptyList("tasks");
   const param_task_id: any = getQueryParameterTaskId();
 
   for (let i = 0; i < tasks.length; i++) {
@@ -41,7 +42,7 @@ const deleteTask = () => {
   if (response != "confirm") return;
 
   confirmAction.reset();
-  const tasks: any = JSON.parse(localStorage.getItem("tasks") || "") || [];
+  const tasks: any = getOrCreateEmptyList("tasks");
 
   for (let i = 0; i < tasks.length; i++) {
     // Remove Task from tasks

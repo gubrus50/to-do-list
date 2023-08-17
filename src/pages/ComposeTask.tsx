@@ -1,5 +1,6 @@
 import cookies from "../scripts/cookies";
 import confirmAction from "../scripts/confirmAction";
+import getOrCreateEmptyList from "../scripts/localStorageList";
 import { useEffect } from "react";
 
 const input: any = {};
@@ -33,7 +34,7 @@ const createAndSaveValidTask = () => {
   }
 
   // Construct task object
-  const tasks: any = JSON.parse(localStorage.getItem("tasks") || "") || [];
+  const tasks: any = getOrCreateEmptyList("tasks");
   let biggest_id = -1;
 
   for (let i = 0; i < tasks.length; i++) {
@@ -76,7 +77,7 @@ const exitToMainPage = () => {
 };
 
 const onActionResponse = () => {
-  // Return if actionResponse if not "confirm" nor "cancel"
+  // Return if actionResponse is not "confirm" nor "cancel"
   const response = confirmAction.response() || null;
   if (response != "confirm" && response != "cancel") return;
 
